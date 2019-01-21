@@ -1,5 +1,6 @@
 package base;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -25,13 +26,14 @@ public class BaseMethodsForTests {
     public HomePage openHomePage() {
         getDriver();
         openPage(homePage);
+        driver.findElement(By.xpath("//div[@class='modal-dialog']//button[text()='NO']")).click();
         return new HomePage(driver);
     }
 
-    @AfterTest
-    public void tearDown() {
-        driver.quit();
-    }
+//    @AfterTest
+//    public void tearDown() {
+//        driver.quit();
+//    }
 
 
 }
