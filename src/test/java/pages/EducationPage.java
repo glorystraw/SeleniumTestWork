@@ -5,15 +5,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class EducationPage {
 
     private WebDriver driver;
+    List list;
     private final By educationPageHeader = By.xpath("//h1//span[text()='Education']");
     private final By leftMenuLinks = By.xpath("//div[@class='side-panel']//ul/li");
-    List<String> arrayLinkTitles = Arrays.asList("Information & Library Science",
+
+    List<String> LinkTitles = Arrays.asList("Information & Library Science",
             "Education & Public Policy",
             "K-12 General",
             "Higher Education General",
@@ -43,13 +46,16 @@ public class EducationPage {
     }
 
     public EducationPage getLeftMenuLinks() {
-        List<WebElement> leftMenuItems = driver.findElements(By.xpath("//div[@class='side-panel']//ul/li"));
-
+        List<WebElement> leftMenuItems = driver.findElements(By.xpath("//div[@class='side-panel']//ul//li"));
+        List<String> list = new ArrayList<>();
         for (int i = 0; i < leftMenuItems.size(); i++) {
             String elementTitle = leftMenuItems.get(i).getText();
-            System.out.println(elementTitle);
+            list.add(elementTitle);
+
         }
+        Assert.assertEquals(list, LinkTitles);
         return this;
     }
 
-    }
+
+}

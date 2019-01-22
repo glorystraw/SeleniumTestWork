@@ -11,7 +11,8 @@ public class EducationPageTest extends BaseMethodsForTests {
                 .goToStudentsPage()
                 .goToEducationPage()
                 .checkEducationHeader()
-                .checkLeftMenuItemsNumber();
+                .checkLeftMenuItemsNumber()
+                .getLeftMenuLinks();
     }
 
 }
