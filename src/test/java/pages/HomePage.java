@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.util.ArrayList;
@@ -27,6 +28,8 @@ public class HomePage {
     private final By topMenuSubjectsLink = By.xpath("//li[@class='dropdown-submenu']/a[text()='SUBJECTS']");
     private final By whoWeServeSubMenuLinks = By.xpath("//div[@id='Level1NavNode1']//a");
     private final By topMenuWhoWeServeStudentsLink = By.xpath("//div[@id='Level1NavNode1']//a[text()='Students']");
+    private final By searchButton = By.xpath("//span[@class='input-group-btn']/button");
+    private final By logo = By.xpath("//div[@class='yCmsContentSlot logo']//a");
 
     public HomePage checkTopMenuLinksAreDisplayed() {
         List<WebElement> topMenuItems = driver.findElements(topMenuLinks);
@@ -89,15 +92,44 @@ public class HomePage {
 
     public HomePage checkSearchButtonEmptyClick() {
         String oldPageData = driver.getPageSource();
-        driver.findElement(By.xpath("//span[@class='input-group-btn']/button")).click();
+        driver.findElement(searchButton).click();
         String newPageData = driver.getPageSource();
         Assert.assertEquals(oldPageData, newPageData);
         return this;
     }
 
     public HomePage clickLogo() {
-        driver.findElement(By.xpath("//div[@class='yCmsContentSlot logo']//a")).click();
+        driver.findElement(logo).click();
         return new HomePage(driver);
     }
+
+    public HomePage inputMathSearchForm(){
+        driver.findElement(By.xpath("//input[@id='js-site-search-input']")).sendKeys("Math");
+        try{
+            Thread.sleep(1000);
+        }
+        catch(InterruptedException ie){
+        }
+        Assert.assertTrue(driver.findElement(By.id("ui-id-2")).isDisplayed());
+      //  driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]")).size();
+        Assert.assertEquals(driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]")).size(), 4);
+
+        //Two methods to check "math" contains
+        driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Products']//following-sibling::div//div")).size();
+        driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Products']//following-sibling::div//div[contains(., 'Math')]")).size();
+
+        List<WebElement> elementList = driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Products']//following-sibling::div//div"));
+        Assert.assertTrue(elementList.size() == 4, "Unexpected elements count. Expected: " + 4
+                + " But we have: " + elementList.size());
+        for ( WebElement element : elementList) {
+            String elementTitle = element.findElement(By.cssSelector(".product-title a")).getText();
+            Assert.assertTrue(elementTitle.contains("math"), "Text doesn't contains Math");
+        }
+
+        return this;
+
+    }
+
+
 
 }
