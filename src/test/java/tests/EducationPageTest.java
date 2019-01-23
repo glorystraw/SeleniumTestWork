@@ -1,9 +1,9 @@
 package tests;
 
-import base.BaseMethodsForTests;
+import base.MainMethods;
 import org.testng.annotations.Test;
 
-public class EducationPageTest extends BaseMethodsForTests {
+public class EducationPageTest extends MainMethods {
 
     @Test
     public void CheckEducationPageHeader(){

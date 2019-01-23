@@ -1,13 +1,17 @@
 package tests;
 
-import base.BaseMethodsForTests;
+import base.MainMethods;
 import org.testng.annotations.Test;
 
-public class TopMenuLinksTest extends BaseMethodsForTests {
+public class TopMenuLinksTest extends MainMethods {
+
+
 
     @Test
-    public void TopMenuLinksDispay(){
-        openHomePage().checkTopMenuLinksAreDisplayed();
+    public void TopMenuLinksDisplay() {
+        openHomePage()
+                .checkTopMenuLinksAreDisplayed()
+                .checkTopMenuLinksHaveText();
 
     }
 }

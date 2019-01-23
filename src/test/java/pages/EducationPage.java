@@ -13,10 +13,11 @@ public class EducationPage {
 
     private WebDriver driver;
     List list;
+
     private final By educationPageHeader = By.xpath("//h1//span[text()='Education']");
     private final By leftMenuLinks = By.xpath("//div[@class='side-panel']//ul/li");
 
-    List<String> LinkTitles = Arrays.asList("Information & Library Science",
+    List<String> linkTitles = Arrays.asList("Information & Library Science",
             "Education & Public Policy",
             "K-12 General",
             "Higher Education General",
@@ -53,9 +54,8 @@ public class EducationPage {
             list.add(elementTitle);
 
         }
-        Assert.assertEquals(list, LinkTitles);
+        Assert.assertEquals(list, linkTitles);
         return this;
     }
-
 
 }

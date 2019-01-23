@@ -1,27 +1,26 @@
 package tests;
 
-import base.BaseMethodsForTests;
+import base.MainMethods;
 import org.testng.annotations.Test;
 
-public class StudentsPageTest extends BaseMethodsForTests {
-
+public class StudentsPageTest extends MainMethods {
 
     @Test
     public void CheckStudentsUrl() {
         openHomePage()
                 .goToStudentsPage()
                 .checkStudentUrlIsOpened();
-
-
     }
+
     @Test
-    public void CheckStudentsPageHeader(){
+    public void CheckStudentsPageHeader() {
         openHomePage()
                 .goToStudentsPage()
                 .checkStudentsHeader();
     }
+
     @Test
-    public void CheckStudentsPageWileyPlusLink(){
+    public void CheckStudentsPageWileyPlusLink() {
         openHomePage()
                 .goToStudentsPage()
                 .checkWileyPlusLink();
