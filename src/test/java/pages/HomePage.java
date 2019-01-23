@@ -81,6 +81,7 @@ public class HomePage {
     }
 
     public HomePage checkHomePageTitle() {
+        clickLogo();
         String newHomePage = driver.getTitle();
         Assert.assertEquals(newHomePage, "Homepage | Wiley");
         return this;
@@ -91,7 +92,7 @@ public class HomePage {
         return this;
     }
 
-    public HomePage returnHome() {
+    public HomePage clickLogo() {
         driver.findElement(By.xpath("//div[@class='yCmsContentSlot logo']//a")).click();
         return new HomePage(driver);
     }

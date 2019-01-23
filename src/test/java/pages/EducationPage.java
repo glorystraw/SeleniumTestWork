@@ -12,8 +12,6 @@ import java.util.List;
 public class EducationPage {
 
     private WebDriver driver;
-    List list;
-
     private final By educationPageHeader = By.xpath("//h1//span[text()='Education']");
     private final By leftMenuLinks = By.xpath("//div[@class='side-panel']//ul/li");
 
@@ -52,7 +50,6 @@ public class EducationPage {
         for (int i = 0; i < leftMenuItems.size(); i++) {
             String elementTitle = leftMenuItems.get(i).getText();
             list.add(elementTitle);
-
         }
         Assert.assertEquals(list, linkTitles);
         return this;

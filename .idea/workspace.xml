@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d58dd004-7ee3-4203-9b23-10565994d4ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/BackToMainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/SearchButtonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseMethodsForTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/MainMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/EducationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/EducationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/StudentsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/StudentsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/EducationPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/EducationPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/StudentsPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/StudentsPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TopMenuLinksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TopMenuLinksTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TopMenuWhoWeServeLinksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TopMenuWhoWeServeLinksTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/base/BaseMethodsForTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/EducationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/EducationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/StudentsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/StudentsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/EducationPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/EducationPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/StudentsPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/StudentsPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TopMenuLinksTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/TopMenuLinksTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TopMenuWhoWeServeLinksTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/TopMenuWhoWeServeLinksTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BackToMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BackToMainPage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -73,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pages/EducationPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="58" column="5" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="58" selection-end-column="5" />
+            <state relative-caret-position="-332">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/base/MainMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+            <state relative-caret-position="221">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pages/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="303">
+              <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
               <folding>
                 <element signature="e#343#344#0" expanded="true" />
                 <element signature="e#379#380#0" expanded="true" />
@@ -121,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/BackToMainPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+            <state relative-caret-position="221">
+              <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/EducationPageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+            <state relative-caret-position="272">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,7 +160,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/tests/TopMenuLinksDispayedTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/TopMenuLinksDispayTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pages/EducationPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/BackToHomePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/base/MainMethodsTests.java" />
@@ -183,13 +167,14 @@
         <option value="$PROJECT_DIR$/src/test/java/base/BaseMethodsForTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/MainPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/SearchButtonTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/BackToMainPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/EducationPageTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/base/MainMethods.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/TopMenuLinksTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/TopMenuWhoWeServeLinksTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/StudentsPageTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/StudentsPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pages/EducationPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/BackToMainPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/HomePage.java" />
       </list>
     </option>
@@ -272,7 +257,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548207287337" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548208740439" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -289,7 +274,41 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.StudentsPageTest">
+  <component name="RunManager" selected="TestNG.BackToMainPage.homePageIsOpened">
+    <configuration name="BackToMainPage.homePageIsOpened" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="seleniumtests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.BackToMainPage" />
+      <option name="METHOD_NAME" value="homePageIsOpened" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EducationPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="seleniumtests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.EducationPageTest" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StudentsPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="seleniumtests" />
       <extension name="coverage">
@@ -300,38 +319,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.StudentsPageTest" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TopMenuLinksTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="seleniumtests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TopMenuLinksTest" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TopMenuWhoWeServeLinksTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="seleniumtests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TopMenuWhoWeServeLinksTest" />
       <properties />
       <listeners />
       <method v="2">
@@ -376,11 +363,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.BackToMainPage.homePageIsOpened" />
+        <item itemvalue="TestNG.EducationPageTest" />
         <item itemvalue="TestNG.StudentsPageTest" />
         <item itemvalue="TestNG.TopMenuWhoWeServeLinksTest.TopMenuWhoWeServeLinks" />
         <item itemvalue="TestNG.TopMenuWhoWeServeLinksTest.TopMenuTitlesTest" />
-        <item itemvalue="TestNG.TopMenuWhoWeServeLinksTest" />
-        <item itemvalue="TestNG.TopMenuLinksTest" />
       </list>
     </recent_temporary>
   </component>
@@ -409,16 +396,17 @@
       <option name="project" value="LOCAL" />
       <updated>1548152991489</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="TestProject Selenium Webdriver with TestNG">
+      <created>1548207343206</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1548207343206</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TopMenuLinksTest - 2019.01.23 at 03h 38m 58s.xml">
-      <configuration name="TopMenuLinksTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TopMenuLinksTest - 2019.01.23 at 03h 40m 28s.xml">
-      <configuration name="TopMenuLinksTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="TopMenuLinksTest - 2019.01.23 at 03h 42m 57s.xml">
       <configuration name="TopMenuLinksTest" configurationId="TestNG" />
     </history-entry>
@@ -442,6 +430,12 @@
     </history-entry>
     <history-entry file="StudentsPageTest - 2019.01.23 at 04h 28m 58s.xml">
       <configuration name="StudentsPageTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="EducationPageTest - 2019.01.23 at 04h 39m 54s.xml">
+      <configuration name="EducationPageTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="BackToMainPage_homePageIsOpened - 2019.01.23 at 04h 52m 18s.xml">
+      <configuration name="BackToMainPage.homePageIsOpened" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -507,7 +501,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fourth Test" />
     <MESSAGE value="TestProject Selenium Webdriver with TestNG 4testactions" />
-    <option name="LAST_COMMIT_MESSAGE" value="TestProject Selenium Webdriver with TestNG 4testactions" />
+    <MESSAGE value="TestProject Selenium Webdriver with TestNG" />
+    <option name="LAST_COMMIT_MESSAGE" value="TestProject Selenium Webdriver with TestNG" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -566,36 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/BackToMainPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/EducationPageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/base/MainMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/TopMenuLinksTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -606,30 +571,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/EducationPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pages/EducationPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/TopMenuWhoWeServeLinksTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/StudentsPageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="-332">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -648,15 +603,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/TopMenuWhoWeServeLinksTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/base/MainMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/StudentsPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pages/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="303">
+          <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
           <folding>
             <element signature="e#343#344#0" expanded="true" />
             <element signature="e#379#380#0" expanded="true" />
             <element signature="e#2949#2950#0" expanded="true" />
             <element signature="e#3015#3016#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/BackToMainPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
