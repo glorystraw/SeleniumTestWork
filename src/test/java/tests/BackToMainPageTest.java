@@ -3,12 +3,12 @@ package tests;
 import base.MainMethods;
 import org.testng.annotations.Test;
 
-public class BackToMainPage extends MainMethods {
+public class BackToMainPageTest extends MainMethods {
 
     @Test
     public void homePageIsOpened() {
 
-        openHomePage().checkHomePageTitle();
+        openHomePage().checkHomePageOpened();
 
     }
 }

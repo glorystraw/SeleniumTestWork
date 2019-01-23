@@ -80,15 +80,18 @@ public class HomePage {
 
     }
 
-    public HomePage checkHomePageTitle() {
+    public HomePage checkHomePageOpened() {
         clickLogo();
         String newHomePage = driver.getTitle();
         Assert.assertEquals(newHomePage, "Homepage | Wiley");
         return this;
     }
 
-    public HomePage searchButtonClick() {
+    public HomePage checkSearchButtonEmptyClick() {
+        String oldPageData = driver.getPageSource();
         driver.findElement(By.xpath("//span[@class='input-group-btn']/button")).click();
+        String newPageData = driver.getPageSource();
+        Assert.assertEquals(oldPageData, newPageData);
         return this;
     }
 
