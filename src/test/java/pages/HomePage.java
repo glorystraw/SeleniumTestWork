@@ -103,13 +103,15 @@ public class HomePage {
         return new HomePage(driver);
     }
 
-    public HomePage inputMathSearchForm(){
+    public HomePage inputMathSearchForm() {
         driver.findElement(By.xpath("//input[@id='js-site-search-input']")).sendKeys("Math");
-        try{
+        try {
             Thread.sleep(1000);
+        } catch (InterruptedException ie) {
         }
-        catch(InterruptedException ie){
-        }
+        return this;
+    }
+    public HomePage checkInputMathSearchForm(){
         Assert.assertTrue(driver.findElement(By.id("ui-id-2")).isDisplayed());
       //  driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]")).size();
         Assert.assertEquals(driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]")).size(), 4);
@@ -124,10 +126,16 @@ public class HomePage {
         for ( WebElement element : elementList) {
             String elementTitle = element.findElement(By.cssSelector(".product-title a")).getText();
             Assert.assertTrue(elementTitle.contains("math"), "Text doesn't contains Math");
+
         }
 
         return this;
 
+    }
+
+    public SearchPage goToSearchPage(){
+        driver.findElement(searchButton).click();
+        return new SearchPage(driver);
     }
 
 
