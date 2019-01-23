@@ -19,8 +19,8 @@ public class HomePage {
         this.driver = driver;
     }
 
-    private List<String> topMenuLinksList = Arrays.asList("WHO WE SERVE", "SUBJECTS", "ABOUT");
-    private List<String> topMenuWhoWeServeLinksList = Arrays.asList("Students", "Instructors", "Book Authors",
+    private final List<String> topMenuLinksList = Arrays.asList("WHO WE SERVE", "SUBJECTS", "ABOUT");
+    private final List<String> topMenuWhoWeServeLinksList = Arrays.asList("Students", "Instructors", "Book Authors",
             "Professionals", "Researchers", "Institutions", "Librarians", "Corporations",
             "Societies", "Journal Editors", "Journalists", "Government");
     private final By topMenuLinks = By.xpath("//ul[@class='navigation-menu-items initialized']//a[@class='collapsed']");
@@ -66,10 +66,10 @@ public class HomePage {
 
     public HomePage checkTopMenuWhoWeServeTitles() {
 
-        List<WebElement> MenuItemswhoWeServe = driver.findElements(whoWeServeSubMenuLinks);
+        List<WebElement> menuItemswhoWeServe = driver.findElements(whoWeServeSubMenuLinks);
         List<String> list = new ArrayList<>();
-        for (int i = 0; i < MenuItemswhoWeServe.size(); i++) {
-            String elementTitle = MenuItemswhoWeServe.get(i).getText();
+        for (int i = 0; i < menuItemswhoWeServe.size(); i++) {
+            String elementTitle = menuItemswhoWeServe.get(i).getText();
             list.add(elementTitle);
         }
         Assert.assertEquals(list, topMenuWhoWeServeLinksList);
@@ -111,6 +111,7 @@ public class HomePage {
         }
         return this;
     }
+
     public HomePage checkInputMathSearchForm(){
         Assert.assertTrue(driver.findElement(By.id("ui-id-2")).isDisplayed());
       //  driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]")).size();

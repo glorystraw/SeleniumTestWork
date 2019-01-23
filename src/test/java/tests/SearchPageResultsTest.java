@@ -11,8 +11,8 @@ public class SearchPageResultsTest extends MainMethods {
                 .inputMathSearchForm()
                 .goToSearchPage()
                 .checkSearchResultsNumber()
-                .CheckSearchResultsTitles()
-                .CheckSearchResultsAddToCartButtons();
+                .checkSearchResultsTitles()
+                .checkSearchResultsAddToCartButtons();
 
     }
 }

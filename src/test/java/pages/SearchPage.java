@@ -20,7 +20,7 @@ public class SearchPage {
         return this;
     }
 
-    public SearchPage CheckSearchResultsTitles() {
+    public SearchPage checkSearchResultsTitles() {
         Assert.assertEquals(driver.findElements(sectionWithMath).size(), 10);
 
 //        List<WebElement> elementList = driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Products']//following-sibling::div//div"));
@@ -30,7 +30,7 @@ public class SearchPage {
         return this;
     }
 
-    public SearchPage CheckSearchResultsAddToCartButtons() {
+    public SearchPage checkSearchResultsAddToCartButtons() {
         driver.findElements(productItem).size();
         driver.findElements(productItemWithCartButton).size();
         Assert.assertTrue(driver.findElements(productItemWithCartButton).size() > driver.findElements(productItem).size());

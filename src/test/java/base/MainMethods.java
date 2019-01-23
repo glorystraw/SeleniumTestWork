@@ -3,6 +3,7 @@ package base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import pages.HomePage;
 
@@ -25,19 +26,19 @@ public class MainMethods {
 
     public HomePage openHomePage() {
         driver.get(homeUrl);
-        closeModalWindow();
-        return new HomePage(driver);
-    }
-
-    public HomePage closeModalWindow(){
         driver.findElement(modalWindowButton).click();
         return new HomePage(driver);
     }
 
-//    @AfterTest
-//    public void tearDown() {
-//        driver.quit();
+//    public HomePage closeModalWindow(){
+//        driver.findElement(modalWindowButton).click();
+//        return new HomePage(driver);
 //    }
+
+    @AfterTest
+    public void tearDown() {
+        driver.quit();
+    }
 
 
 }
