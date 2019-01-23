@@ -25,5 +25,4 @@ public class StudentsPageTest extends MainMethods {
                 .goToStudentsPage()
                 .checkWileyPlusLink();
     }
-
 }

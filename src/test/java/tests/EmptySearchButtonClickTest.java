@@ -10,5 +10,4 @@ public class EmptySearchButtonClickTest extends MainMethods {
         openHomePage()
                 .checkSearchButtonEmptyClick();
     }
-
 }

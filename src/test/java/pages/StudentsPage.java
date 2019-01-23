@@ -21,7 +21,6 @@ public class StudentsPage {
         this.driver = driver;
     }
 
-
     public StudentsPage checkStudentUrlIsOpened() {
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.wiley.com/en-ru/students");
         return this;
@@ -51,5 +50,4 @@ public class StudentsPage {
         driver.findElement(topMenuSubjectsEducationLink).click();
         return new EducationPage(driver);
     }
-
 }

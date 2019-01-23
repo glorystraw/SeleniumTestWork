@@ -14,8 +14,7 @@ public class EducationPage {
     private WebDriver driver;
     private final By educationPageHeader = By.xpath("//h1//span[text()='Education']");
     private final By leftMenuLinks = By.xpath("//div[@class='side-panel']//ul/li");
-
-    List<String> linkTitles = Arrays.asList("Information & Library Science",
+    private final List<String> linkTitles = Arrays.asList("Information & Library Science",
             "Education & Public Policy",
             "K-12 General",
             "Higher Education General",
@@ -54,5 +53,4 @@ public class EducationPage {
         Assert.assertEquals(list, linkTitles);
         return this;
     }
-
 }

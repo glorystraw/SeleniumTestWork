@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.util.ArrayList;
@@ -112,9 +111,9 @@ public class HomePage {
         return this;
     }
 
-    public HomePage checkInputMathSearchForm(){
+    public HomePage checkInputMathSearchForm() {
         Assert.assertTrue(driver.findElement(By.id("ui-id-2")).isDisplayed());
-      //  driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]")).size();
+        //  driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]")).size();
         Assert.assertEquals(driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]")).size(), 4);
 
         //Two methods to check "math" contains
@@ -124,21 +123,15 @@ public class HomePage {
         List<WebElement> elementList = driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Products']//following-sibling::div//div"));
         Assert.assertTrue(elementList.size() == 4, "Unexpected elements count. Expected: " + 4
                 + " But we have: " + elementList.size());
-        for ( WebElement element : elementList) {
+        for (WebElement element : elementList) {
             String elementTitle = element.findElement(By.cssSelector(".product-title a")).getText();
             Assert.assertTrue(elementTitle.contains("math"), "Text doesn't contains Math");
-
         }
-
         return this;
-
     }
 
-    public SearchPage goToSearchPage(){
+    public SearchPage goToSearchPage() {
         driver.findElement(searchButton).click();
         return new SearchPage(driver);
     }
-
-
-
 }

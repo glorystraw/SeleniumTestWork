@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class SearchPage {
-
     private WebDriver driver;
     private final By productItem = By.xpath("//section[@class='product-item ']");
     private final By sectionWithMath = By.xpath("//section[@class='product-item '][contains(., 'Math')]");
@@ -36,5 +35,4 @@ public class SearchPage {
         Assert.assertTrue(driver.findElements(productItemWithCartButton).size() > driver.findElements(productItem).size());
         return this;
     }
-
 }

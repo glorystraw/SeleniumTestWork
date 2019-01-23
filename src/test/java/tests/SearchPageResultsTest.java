@@ -13,6 +13,5 @@ public class SearchPageResultsTest extends MainMethods {
                 .checkSearchResultsNumber()
                 .checkSearchResultsTitles()
                 .checkSearchResultsAddToCartButtons();
-
     }
 }
