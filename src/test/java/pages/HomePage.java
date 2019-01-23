@@ -75,7 +75,7 @@ public class HomePage {
         return this;
     }
 
-    public StudentsPage goToStudentsPage() {
+    public StudentsPage clickStudentsMenuItem() {
         makeVisibleTopMenuWhoWeServeLinks();
         driver.findElement(topMenuWhoWeServeStudentsLink).click();
         return new StudentsPage(driver);
@@ -89,8 +89,9 @@ public class HomePage {
         return this;
     }
 
-    public HomePage checkSearchButtonEmptyClick() {
+    public HomePage checkNoChangesForEmptySearch() {
         String oldPageData = driver.getPageSource();
+        //TODO new method for this click
         driver.findElement(searchButton).click();
         String newPageData = driver.getPageSource();
         Assert.assertEquals(oldPageData, newPageData);
@@ -112,6 +113,7 @@ public class HomePage {
     }
 
     public HomePage checkInputMathSearchForm() {
+        inputMathSearchForm();
         Assert.assertTrue(driver.findElement(By.id("ui-id-2")).isDisplayed());
         //  driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]")).size();
         Assert.assertEquals(driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]")).size(), 4);

@@ -8,21 +8,21 @@ public class StudentsPageTest extends MainMethods {
     @Test
     public void CheckStudentsUrl() {
         openHomePage()
-                .goToStudentsPage()
+                .clickStudentsMenuItem()
                 .checkStudentUrlIsOpened();
     }
 
     @Test
     public void CheckStudentsPageHeader() {
         openHomePage()
-                .goToStudentsPage()
+                .clickStudentsMenuItem()
                 .checkStudentsHeader();
     }
 
     @Test
     public void CheckStudentsPageWileyPlusLink() {
         openHomePage()
-                .goToStudentsPage()
+                .clickStudentsMenuItem()
                 .checkWileyPlusLink();
     }
 }

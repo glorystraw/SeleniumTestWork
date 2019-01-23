@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 public class EducationPageTest extends MainMethods {
 
     @Test
-    public void CheckEducationPageHeader(){
+    public void checkEducationPageHeader(){
         openHomePage()
-                .goToStudentsPage()
+                .clickStudentsMenuItem()
                 .goToEducationPage()
                 .checkEducationHeader()
                 .checkLeftMenuItemsNumber()
