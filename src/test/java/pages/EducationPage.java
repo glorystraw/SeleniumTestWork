@@ -11,7 +11,7 @@ import java.util.List;
 
 public class EducationPage {
 
-    private WebDriver driver;
+    private final WebDriver driver;
     private final By educationPageHeader = By.xpath("//h1//span[text()='Education']");
     private final By leftMenuLinks = By.xpath("//div[@class='side-panel']//ul/li");
     private final List<String> linkTitles = Arrays.asList("Information & Library Science",
@@ -43,7 +43,7 @@ public class EducationPage {
         return this;
     }
 
-    public EducationPage getLeftMenuLinks() {
+    public EducationPage checkLeftMenuLinks() {
         List<WebElement> leftMenuItems = driver.findElements(By.xpath("//div[@class='side-panel']//ul//li"));
         List<String> list = new ArrayList<>();
         for (int i = 0; i < leftMenuItems.size(); i++) {

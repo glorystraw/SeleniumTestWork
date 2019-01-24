@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class SearchMathInputTest extends MainMethods {
 
     @Test
-    public void CheckSearchInputWithWordMath() {
+    public void checkSearchInputWithWordMath() {
         openHomePage()
                 .checkInputMathSearchForm();
     }

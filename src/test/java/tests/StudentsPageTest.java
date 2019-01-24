@@ -6,21 +6,21 @@ import org.testng.annotations.Test;
 public class StudentsPageTest extends MainMethods {
 
     @Test
-    public void CheckStudentsUrl() {
+    public void checkStudentsUrl() {
         openHomePage()
                 .clickStudentsMenuItem()
                 .checkStudentUrlIsOpened();
     }
 
     @Test
-    public void CheckStudentsPageHeader() {
+    public void checkStudentsPageHeader() {
         openHomePage()
                 .clickStudentsMenuItem()
                 .checkStudentsHeader();
     }
 
     @Test
-    public void CheckStudentsPageWileyPlusLink() {
+    public void checkStudentsPageWileyPlusLink() {
         openHomePage()
                 .clickStudentsMenuItem()
                 .checkWileyPlusLink();

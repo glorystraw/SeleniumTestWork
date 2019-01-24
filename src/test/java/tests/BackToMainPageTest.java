@@ -7,6 +7,7 @@ public class BackToMainPageTest extends MainMethods {
 
     @Test
     public void homePageIsOpened() {
-        openHomePage().checkHomePageOpened();
+        openHomePage()
+                .checkHomePageIsOpened();
     }
 }

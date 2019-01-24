@@ -12,7 +12,7 @@ import java.util.List;
 
 public class HomePage {
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -29,49 +29,45 @@ public class HomePage {
     private final By topMenuWhoWeServeStudentsLink = By.xpath("//div[@id='Level1NavNode1']//a[text()='Students']");
     private final By searchButton = By.xpath("//span[@class='input-group-btn']/button");
     private final By logo = By.xpath("//div[@class='yCmsContentSlot logo']//a");
+    private final By searchMathSuggestions = By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]");
+    private final By searchProductsSuggestions = By.xpath("//aside[@id='ui-id-2']//h3[text()='Products']//following-sibling::div//div");
+    private final By searchProductsTitleSuggestions = By.xpath("//aside[@id='ui-id-2']//h3[text()='Products']//following-sibling::div//div/a");
+    private final By searchInputField = By.xpath("//input[@id='js-site-search-input']");
+
 
     public HomePage checkTopMenuLinksAreDisplayed() {
         List<WebElement> topMenuItems = driver.findElements(topMenuLinks);
         for (WebElement link : getMenuLinksElements()) {
-            Assert.assertTrue(link.isDisplayed(), "Link:" + link.getText() + "is not displayed.");
+            Assert.assertTrue(link.isDisplayed(), "Link in top menu:" + link.getText() + "is not displayed.");
         }
         return this;
     }
 
     public HomePage checkTopMenuLinksHaveText() {
-        Assert.assertEquals(topMenuLinksList.size(), getMenuLinksElements().size());
+        Assert.assertEquals(topMenuLinksList.size(), getMenuLinksElements().size(),
+                "We have different number of elements in Top menu: ");
         for (int linkIndex = 0; linkIndex < topMenuLinksList.size(); linkIndex++) {
-            Assert.assertEquals(topMenuLinksList.get(linkIndex), getMenuLinksElements().get(linkIndex).getText());
+            Assert.assertEquals(topMenuLinksList.get(linkIndex), getMenuLinksElements().get(linkIndex).getText(),
+                    "We have different link titles in Top menu:");
         }
-        return this;
-    }
-
-    private List<WebElement> getMenuLinksElements() {
-        return driver.findElements(topMenuLinks);
-    }
-
-    public HomePage makeVisibleTopMenuWhoWeServeLinks() {
-        WebElement link = driver.findElement(topMenuWhoWeServeLink);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(link).build().perform();
         return this;
     }
 
     public HomePage checkTopMenuWhoWeServeSubLinksNumber() {
         List<WebElement> submenuItems = driver.findElements(whoWeServeSubMenuLinks);
-        Assert.assertEquals(submenuItems.size(), 12);
+        Assert.assertEquals(submenuItems.size(), 12, "We have different number of links in Who We Serve dropdown menu: ");
         return this;
     }
 
     public HomePage checkTopMenuWhoWeServeTitles() {
-
-        List<WebElement> menuItemswhoWeServe = driver.findElements(whoWeServeSubMenuLinks);
+        makeVisibleTopMenuWhoWeServeLinks();
+        List<WebElement> menuItemsWhoWeServe = driver.findElements(whoWeServeSubMenuLinks);
         List<String> list = new ArrayList<>();
-        for (int i = 0; i < menuItemswhoWeServe.size(); i++) {
-            String elementTitle = menuItemswhoWeServe.get(i).getText();
+        for (int i = 0; i < menuItemsWhoWeServe.size(); i++) {
+            String elementTitle = menuItemsWhoWeServe.get(i).getText();
             list.add(elementTitle);
         }
-        Assert.assertEquals(list, topMenuWhoWeServeLinksList);
+        Assert.assertEquals(list, topMenuWhoWeServeLinksList, "We have different link titles in Who We Serve dropdown menu: ");
         return this;
     }
 
@@ -79,10 +75,9 @@ public class HomePage {
         makeVisibleTopMenuWhoWeServeLinks();
         driver.findElement(topMenuWhoWeServeStudentsLink).click();
         return new StudentsPage(driver);
-
     }
 
-    public HomePage checkHomePageOpened() {
+    public HomePage checkHomePageIsOpened() {
         clickLogo();
         String newHomePage = driver.getTitle();
         Assert.assertEquals(newHomePage, "Homepage | Wiley");
@@ -91,43 +86,34 @@ public class HomePage {
 
     public HomePage checkNoChangesForEmptySearch() {
         String oldPageData = driver.getPageSource();
-        //TODO new method for this click
-        driver.findElement(searchButton).click();
+        clickSearchButton();
         String newPageData = driver.getPageSource();
-        Assert.assertEquals(oldPageData, newPageData);
+        Assert.assertEquals(oldPageData, newPageData, "Page has changes");
         return this;
     }
 
-    public HomePage clickLogo() {
-        driver.findElement(logo).click();
-        return new HomePage(driver);
-    }
-
-    public HomePage inputMathSearchForm() {
-        driver.findElement(By.xpath("//input[@id='js-site-search-input']")).sendKeys("Math");
+    public HomePage inputMathInSearchForm() {
+        driver.findElement(searchInputField).sendKeys("Math");
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException ie) {
+            System.out.println("Input is failed");
         }
         return this;
     }
 
     public HomePage checkInputMathSearchForm() {
-        inputMathSearchForm();
+        inputMathInSearchForm();
         Assert.assertTrue(driver.findElement(By.id("ui-id-2")).isDisplayed());
-        //  driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]")).size();
-        Assert.assertEquals(driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Suggestions']//following-sibling::div//div[starts-with(., 'math')]")).size(), 4);
-
-        //Two methods to check "math" contains
-        driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Products']//following-sibling::div//div")).size();
-        driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Products']//following-sibling::div//div[contains(., 'Math')]")).size();
-
-        List<WebElement> elementList = driver.findElements(By.xpath("//aside[@id='ui-id-2']//h3[text()='Products']//following-sibling::div//div"));
-        Assert.assertTrue(elementList.size() == 4, "Unexpected elements count. Expected: " + 4
-                + " But we have: " + elementList.size());
+        Assert.assertEquals(driver.findElements(searchMathSuggestions).size(), 4,
+                "We have different number of suggestions starting with Math: ");
+        List<WebElement> elementList = driver.findElements(searchProductsSuggestions);
+        //For new site we have five product suggestions in search output
+        Assert.assertEquals(elementList.size(), 5,
+                "We have different number of search results in products suggestion block:");
         for (WebElement element : elementList) {
-            String elementTitle = element.findElement(By.cssSelector(".product-title a")).getText();
-            Assert.assertTrue(elementTitle.contains("math"), "Text doesn't contains Math");
+            String elementTitle = element.findElement(searchProductsTitleSuggestions).getText();
+            Assert.assertTrue(elementTitle.contains("Math"), "Text doesn't contain Math");
         }
         return this;
     }
@@ -136,4 +122,26 @@ public class HomePage {
         driver.findElement(searchButton).click();
         return new SearchPage(driver);
     }
+
+    private List<WebElement> getMenuLinksElements() {
+        return driver.findElements(topMenuLinks);
+    }
+
+    private HomePage clickSearchButton() {
+        driver.findElement(searchButton).click();
+        return new HomePage(driver);
+    }
+
+    private HomePage clickLogo() {
+        driver.findElement(logo).click();
+        return new HomePage(driver);
+    }
+
+    private HomePage makeVisibleTopMenuWhoWeServeLinks() {
+        WebElement link = driver.findElement(topMenuWhoWeServeLink);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(link).build().perform();
+        return this;
+    }
+
 }

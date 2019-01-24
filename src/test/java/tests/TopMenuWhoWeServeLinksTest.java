@@ -6,10 +6,9 @@ import org.testng.annotations.Test;
 public class TopMenuWhoWeServeLinksTest extends MainMethods {
 
     @Test
-    public void TopMenuWhoWeServeLinks(){
+    public void topMenuWhoWeServeLinks() {
         openHomePage()
                 .checkTopMenuWhoWeServeSubLinksNumber()
-                .makeVisibleTopMenuWhoWeServeLinks()
                 .checkTopMenuWhoWeServeTitles();
     }
 }

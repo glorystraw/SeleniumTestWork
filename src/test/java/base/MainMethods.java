@@ -20,7 +20,6 @@ public class MainMethods {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-
     }
 
     public HomePage openHomePage() {
@@ -29,11 +28,10 @@ public class MainMethods {
         return new HomePage(driver);
     }
 
-    private MainMethods closeModalWindow() {
+    private void closeModalWindow() {
         if (driver.findElement(modalWindowButton).isDisplayed()) {
             driver.findElement(modalWindowButton).click();
         }
-        return this;
     }
 
     @AfterClass

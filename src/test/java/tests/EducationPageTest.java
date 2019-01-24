@@ -12,6 +12,6 @@ public class EducationPageTest extends MainMethods {
                 .goToEducationPage()
                 .checkEducationHeader()
                 .checkLeftMenuItemsNumber()
-                .getLeftMenuLinks();
+                .checkLeftMenuLinks();
     }
 }

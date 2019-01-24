@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class TopMenuLinksTest extends MainMethods {
 
     @Test
-    public void TopMenuLinksDisplay() {
+    public void topMenuLinksDisplay() {
         openHomePage()
                 .checkTopMenuLinksAreDisplayed()
                 .checkTopMenuLinksHaveText();

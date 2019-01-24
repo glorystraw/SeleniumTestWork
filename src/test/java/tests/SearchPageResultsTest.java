@@ -6,12 +6,13 @@ import org.testng.annotations.Test;
 public class SearchPageResultsTest extends MainMethods {
 
     @Test
-    public void CheckSearchPageResults() {
+    public void checkSearchPageResults() {
         openHomePage()
-                .inputMathSearchForm()
+                .inputMathInSearchForm()
                 .goToSearchPage()
                 .checkSearchResultsNumber()
                 .checkSearchResultsTitles()
-                .checkSearchResultsAddToCartButtons();
+                .checkSearchResultsAddToCartButtons()
+                .checkSearchResultSame();
     }
 }
